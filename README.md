@@ -1,11 +1,8 @@
 # LAZY CHAT REACT
 
-## Installation
+Run `npm install`
 
-1. Clone the repository
-2. Run `npm install`
-
-## these shoudl work without errors
+these should work without errors
 
 ```sh
 npm run storybook
@@ -14,10 +11,10 @@ npm run test:ui
 npm run build
 ```
 
-## Left to do
+Pending
 
 - [ ] changelog
 - [ ] licence file
-- homepage, licence, url fields in package.json
-- husky
-- deploy
+- [ ] homepage, licence, url fields in package.json
+- [ ] husky
+- [ ] deploy
