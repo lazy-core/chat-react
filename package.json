@@ -3,14 +3,20 @@
   "version": "0.0.0",
   "type": "module",
   "private": false,
-  "module": "dist/index.js",
-  "exports": "./dist/index.js",
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/lazy-chat-react.es.js",
+      "require": "./dist/lazy-chat-react.umd.js"
+    }
+  },
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "description": "Chat app using React",
-  "author": "@lazy-core",
+  "description": "",
+  "author": "",
   "license": "",
   "keywords": [
     "react",
@@ -26,7 +32,7 @@
   "homepage": "",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx",
     "lint:fix": "eslint . --ext ts,tsx --fix",
@@ -36,17 +42,16 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "coverage": "vitest run --coverage"
+    "coverage": "vitest run --coverage",
+    "prepublishOnly": "vitest run && npm run build"
   },
   "peerDependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.3",
-    "tailwindcss": "^4.1.3"
-  },
   "devDependencies": {
+    "@tailwindcss/vite": "^4.1.3",
+    "tailwindcss": "^4.1.3",
     "@eslint/js": "^9.21.0",
     "@storybook/addon-essentials": "^8.6.12",
     "@storybook/addon-interactions": "^8.6.12",
@@ -77,10 +82,5 @@
     "vite-plugin-dts": "^4.5.3",
     "vite-plugin-lib-inject-css": "^2.2.2",
     "vitest": "^3.1.3"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
   }
 }
