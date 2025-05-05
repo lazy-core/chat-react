@@ -9,14 +9,13 @@ import dts from 'vite-plugin-dts'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  root: 'src/playground',
+  // root: 'src/playground',
   plugins: [
     react(),
     tailwindcss(),
     libInjectCss(),
     dts({
       tsconfigPath: 'tsconfig.lib.json',
-      outDir: resolve(__dirname, 'dist'),
     }),
   ],
 
