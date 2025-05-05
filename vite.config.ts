@@ -9,7 +9,6 @@ import dts from 'vite-plugin-dts'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  // root: 'src/playground',
   plugins: [
     react(),
     tailwindcss(),
