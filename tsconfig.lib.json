@@ -8,5 +8,5 @@
     "noEmit": false
   },
   "include": ["src/lib"],
-  "exclude": ["src/playground", "src/stories"]
+  "exclude": ["src/playground", "**/*.stories.tsx", "src/test", "**/*.test.tsx"]
 }
