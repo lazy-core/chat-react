@@ -1,0 +1,12 @@
+// tsconfig.lib.json
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist/types",
+    "noEmit": false
+  },
+  "include": ["src/lib"],
+  "exclude": ["src/playground", "src/stories"]
+}
