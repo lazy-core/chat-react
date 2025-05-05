@@ -1,5 +1,5 @@
-import "./styles/index.css";
-// export * from "./components";
+import './styles/index.css'
+export * from './components'
 // export * from "./hooks";
 // export * from "./utils";
 // export * from "./types";
