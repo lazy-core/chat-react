@@ -1,7 +1,6 @@
 {
   "name": "@lazy-core/lazy-chat-react",
   "version": "0.0.0",
-  "type": "module",
   "private": false,
   "module": "./dist/index.js",
   "exports": {
