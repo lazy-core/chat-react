@@ -43,7 +43,9 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
-    "prepublishOnly": "vitest run && npm run build"
+    "prepublishOnly": "vitest run && npm run build",
+    "build:playground": "vite build --mode playground",
+    "preview:playground": "vite preview --outDir dist-playground"
   },
   "peerDependencies": {
     "react": "^19.0.0",
