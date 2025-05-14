@@ -1,5 +1,19 @@
+// import MessageBubble from '../lib'
+// import MessageBubble from '../../dist/lazy-chat-react.es.js'
+// import { MessageBubble } from '../../dist'
+// import { MessageBubble } from '../lib/components/MessageBubble'
+// import Button from '../../dist'
+// import MessageBubble from '@lazy-core/lazy-chat-react'
+
+import { Button } from '../lib'
+
 function App() {
-  return <h1 className="text-2xl text-blue-500">Hello Lazy Chat</h1>;
+  return (
+    <div>
+      <Button>Click me</Button>
+      <h1 className='text-2xl text-orange-400'>Hey yo</h1>
+    </div>
+  )
 }
 
-export default App;
+export default App
