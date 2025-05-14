@@ -8,6 +8,7 @@ export interface ChatListItemProps {
   isOnline?: boolean
   isUnread?: boolean
   isRead?: boolean
+  unreadCount?: number // New prop for unread message count
   onClick?: () => void
 }
 
@@ -19,6 +20,7 @@ export const ChatListItem: React.FC<ChatListItemProps> = ({
   isOnline = false,
   isUnread = false,
   isRead = false,
+  unreadCount = 0, // Default to 0
   onClick,
 }) => {
   return (
@@ -52,9 +54,16 @@ export const ChatListItem: React.FC<ChatListItemProps> = ({
           <div className='font-semibold truncate'>{name}</div>
           <span className='text-sm text-gray-500 flex-shrink-0 ml-2'>{timestamp}</span>
         </div>
-        <div className='text-gray-600 flex justify-between items-start'>
+        <div className='text-gray-600 flex justify-between items-center'>
           <span className='line-clamp-2 pr-2'>{preview}</span>
-          {isRead && <span className='text-blue-500 flex-shrink-0 mt-1'>✓</span>}
+          {isRead && unreadCount === 0 && (
+            <span className='text-blue-500 flex-shrink-0 mt-1'>✓</span>
+          )}
+          {unreadCount > 0 && (
+            <div className='flex-shrink-0 bg-green-500 text-white text-xs font-medium rounded-full w-5 h-5 min-w-5 flex items-center justify-center'>
+              {unreadCount > 99 ? '99+' : unreadCount}
+            </div>
+          )}
         </div>
       </div>
     </div>

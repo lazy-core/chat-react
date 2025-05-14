@@ -84,12 +84,12 @@ export const ChatHeader: React.FC<ChatHeaderProps> = ({
           </svg>
         </button>
       </div>
-      <button
+      {/* <button
         onClick={onViewProfileClick}
         className='px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 hidden md:block'
       >
         View profile
-      </button>
+      </button> */}
     </div>
   )
 }

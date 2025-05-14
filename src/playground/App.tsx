@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   ChatLayout,
   ChatList,
@@ -5,7 +6,6 @@ import {
   ChatWindow,
   ChatProfile,
 } from '@lazy-core/lazy-chat-react'
-import { useState } from 'react'
 
 function App() {
   // Sample data for chat list
@@ -215,6 +215,7 @@ function App() {
                 isOnline={item.isOnline}
                 isUnread={item.isUnread}
                 isRead={item.isRead}
+                unreadCount={item.isUnread ? 1 : 0}
                 onClick={() => handleChatItemClick(item.id)}
               />
             ))}
