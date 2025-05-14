@@ -221,7 +221,7 @@ function App() {
             ))}
           </ChatList>
         )}
-        renderChatWindow={({ onBackClick }) =>
+        renderChatWindow={({ onBackClick }: { onBackClick: () => void }) =>
           selectedChat ? (
             <ChatWindow
               contact={{
@@ -242,7 +242,7 @@ function App() {
             </div>
           )
         }
-        renderChatProfile={({ onBackClick }) => (
+        renderChatProfile={({ onBackClick }: { onBackClick: () => void }) => (
           <ChatProfile
             name={selectedChat?.name || ''}
             avatar={selectedChat?.avatar}
